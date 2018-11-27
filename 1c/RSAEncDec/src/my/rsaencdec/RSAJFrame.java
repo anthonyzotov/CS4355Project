@@ -240,7 +240,10 @@ public class RSAJFrame extends javax.swing.JFrame {
     private void generateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateButtonActionPerformed
         // TODO add your handling code here:
         RSAEncDec rc = new RSAEncDec();
-        int primep = rc.generatePrime();
+        String primeq = rc.generatePrimeQ();
+        qEquals.setText(primeq);
+        String primep = rc.generatePrimeP();
+        pEquals.setText(primep);
     }//GEN-LAST:event_generateButtonActionPerformed
 
     private void pEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pEqualsActionPerformed

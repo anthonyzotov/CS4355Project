@@ -19,19 +19,36 @@ public class RSAEncDec {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String p = generatePrimeP();
+        System.out.println(p);
+        String q = generatePrimeQ();
+        System.out.println(q);
     }
-    public int generatePrime(){
+    public static String generatePrimeP(){
+        
+        Random rand = new Random();
+        int low = 5000;
+        int high = 20000;// generate a random number
+        int num = rand.nextInt(high - low) + low;
+
+        while (!isPrime(num)) {          
+            num = rand.nextInt(high - low) + low;
+        }
+        
+        return Integer.toString(num);
+    }
+    
+    public static String generatePrimeQ(){
         
         int num = 0;
         Random rand = new Random(); // generate a random number
-        num = rand.nextInt(1000) + 1;
+        num = rand.nextInt(5000) + 1;
 
         while (!isPrime(num)) {          
-            num = rand.nextInt(1000) + 1;
+            num = rand.nextInt(5000) + 1;
         }
         
-        return num;
+        return Integer.toString(num);
     }
     
     private static boolean isPrime(int inputNum){
