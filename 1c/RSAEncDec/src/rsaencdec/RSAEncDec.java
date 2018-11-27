@@ -21,7 +21,7 @@ public class RSAEncDec {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    public String generatePrime(){
+    public int generatePrime(){
         
         int num = 0;
         Random rand = new Random(); // generate a random number

@@ -5,7 +5,6 @@
  */
 package my.rsaencdec;
 
-import java.util.Random;
 import rsaencdec.RSAEncDec;
 
 /**
