@@ -34,7 +34,7 @@ public class RSAEncDec {
         while (!isPrime(num)) {          
             num = rand.nextInt(high - low) + low;
         }
-        
+         
         return Integer.toString(num);
     }
     

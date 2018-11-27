@@ -80,6 +80,11 @@ public class RSAJFrame extends javax.swing.JFrame {
         step2.setText("2. Computer n = pq");
 
         computeButton.setText("Compute");
+        computeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                computeButtonActionPerformed(evt);
+            }
+        });
 
         setN.setText("n =");
 
@@ -88,6 +93,11 @@ public class RSAJFrame extends javax.swing.JFrame {
         step4.setText("4. Calculate a private key d");
 
         calculateButton.setText("Calculate");
+        calculateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculateButtonActionPerformed(evt);
+            }
+        });
 
         setD.setText("d =");
 
@@ -250,6 +260,14 @@ public class RSAJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pEqualsActionPerformed
 
+    private void calculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_calculateButtonActionPerformed
+
+    private void computeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_computeButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_computeButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -276,7 +294,7 @@ public class RSAJFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(RSAJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        String p = null;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

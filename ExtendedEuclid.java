@@ -1,31 +1,22 @@
 import java.util.*;
+import java.math.BigInteger;
+import java.security.SecureRandom;
+import java.util.Random;
 
 public class ExtendedEuclid{
   public static void main(String [] args){
 
-    Scanner sc = new Scanner(System.in);
+    int BIT_LENGTH = 1024;
+    Random rand = new SecureRandom();
+    BigInteger a = BigInteger.probablePrime(BIT_LENGTH, rand);
+    BigInteger b = BigInteger.probablePrime(BIT_LENGTH, rand);
+    System.out.println("Random input number 1: " + a);
+    System.out.println("Random input number 2: " + b);
 
-    System.out.println("Input number 1: ");
-    int p = sc.nextInt();
-    System.out.println("Input number 2: ");
-    int q = sc.nextInt();
-
-    int vals[] = gcd(p, q);
-    System.out.println("GCD(" + p + ", " + q + ") = " + vals[0]);
-    System.out.println(vals[1] + "(" + p + ") + " + vals[2] + "(" + q + ") = " + vals[0]);
-
-  }
-  static int[] gcd(int p, int q){
-
-    if(q == 0){
-      return new int[] { p, 1, 0 };
-    }
-
-    int[] vals = gcd(q, p % q);
-    int d = vals[0];
-    int a = vals[2];
-    int b = vals[1] - (p / q) * vals[2];
-    return new int[] { d, a, b };
+    BigInteger c = a.modInverse(b);
+    BigInteger d = b.modInverse(a);
+    System.out.println("c= " + c);
+    System.out.println("d= " + d);
 
   }
 }

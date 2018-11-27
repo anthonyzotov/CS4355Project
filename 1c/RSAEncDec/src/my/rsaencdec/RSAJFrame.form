@@ -225,6 +225,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Compute"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="computeButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="setN">
       <Properties>
@@ -249,6 +252,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Calculate"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculateButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="setD">
       <Properties>
